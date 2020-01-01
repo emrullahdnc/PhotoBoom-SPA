@@ -1,0 +1,22 @@
+<nav class="navbar navbar-expand-md navbar-dark fixed-top  bg-primary">
+  <div class="container">
+    <a class="navbar-brand" [routerLink]="['/app-home']">PhotoBoom</a>
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item" routerLinkActive="active">
+        <a class="nav-link" [routerLink]="['/app-list-photo']">
+          My Photos</a>
+      </li>
+      <li class="nav-item" routerLinkActive="active">
+        <a class="nav-link" [routerLink]="['/app-add-photo']">
+          Add Photo</a>
+      </li>
+    </ul>
+
+    <div class="dropdown" dropdown>
+      <a class="dropdown-toggle text-light" role="button" id="dropdownMenuLink" dropdownToggle>
+        Close
+      </a>
+    </div>
+
+  </div>
+</nav>

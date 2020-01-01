@@ -1,0 +1,47 @@
+<div class="container" style="margin-top: 50px;">
+    <div class="py-5 text-center">
+      
+        <h2>Add Photo</h2>
+
+    </div>
+
+    <div class="row">
+
+        <div class="col-md-10 order-md-1">
+           
+            <form [formGroup]="registerForm" id="saveForm" (ngSubmit)="save()" class="needs-validation">
+
+
+
+                <div class="mb-3">
+                    <label for="text">Title </label>
+                    <input type="text" formControlName="title" class="form-control" id="title" placeholder="Title">
+
+                </div>
+
+                <div class="mb-3">
+                    <label for="address">Tag</label>
+                    <tag-input formControlName="tag"></tag-input>
+
+
+
+                </div>
+
+                <div class="mb-3">
+                    <label for="address">Image</label>
+                    <input type="file" #urls formControlName="url" (change)="processFile(urls)" accept="image/*"
+                        class="form-control" id="image" placeholder="image">
+                </div>
+
+
+
+
+                <hr class="mb-4">
+                <button class="btn btn-primary btn-lg btn-block" type="submit">Add Photo</button>
+            </form>
+
+        </div>
+    </div>
+
+
+</div>

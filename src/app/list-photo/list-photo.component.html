@@ -1,0 +1,43 @@
+<div class="box " style="margin-top: 100px !important;">
+    <div class="container">
+        <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
+            <h1 class="display-4">My Photos</h1>
+
+        </div>
+        <div class="row"> 
+            <div  class="col-lg-4 col-md-4 col-sm-4 col-xs-12" *ngFor="let item of imageList; let i = index">
+
+                <a class="focus" [routerLink]="['/app-view-photo', item.id]">
+                    <div  class="card  box-part text-center"> 
+                        <div class="text limited">
+                            <img width="150" height="150" src="{{imgUrl}}/{{item.url}} ">
+                        </div> 
+                    </div>
+                </a> 
+            </div>
+        </div>
+
+        <div class="row" *ngIf="imageList.length == 0">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center">
+                <span class="p-10">
+                    <h4>
+                        <i class="fa fa-meh-o" aria-hidden="true"></i>
+                        You don’t have any photos yet ;(
+                    </h4>
+                </span>
+            </div>
+        </div>
+
+
+        <div class="row" style="margin-top: 50px;cursor: pointer;">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center">
+                <span class="p-10" [routerLink]="['/app-add-photo']">
+                    <h4>
+                        <i class="fa fa-plus-circle" aria-hidden="true"></i>
+                        Add Photo
+                    </h4>
+                </span>
+            </div>
+        </div>
+    </div>
+</div>
